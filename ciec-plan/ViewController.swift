@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var temp:Double = 0
     var str:Double = 0
+    var display:Double = 1
 
     @IBOutlet weak var result: UITextField!
     
@@ -56,38 +57,52 @@ class ViewController: UIViewController {
     
     @IBAction func buttonMul(_ sender: Any) {
         str = 1
-        temp = Double (result.text!)!
+        display = display * Double (result.text!)!
         result.text = ""
     }
     
     @IBAction func buttonDiv(_ sender: Any) {
         str = 2
-        temp = Double (result.text!)!
+        if(display != 1)
+        {
+            display = display / Double (result.text!)!
+        }
+        else
+        {
+            display = Double (result.text!)!
+        }
         result.text = ""
     }
     
     @IBAction func buttonAdd(_ sender: Any) {
         str = 3
-        temp = Double (result.text!)!
+        temp = temp + Double (result.text!)!
         result.text = ""
     }
     
     @IBAction func buttonReduce(_ sender: Any) {
         str = 4
+        if(temp != 0)
+        {
+        temp = temp - Double (result.text!)!
+        }
+        else
+        {
         temp = Double (result.text!)!
+        }
         result.text = ""
     }
     
     @IBAction func buttonResult(_ sender: Any) {
         if str == 1
         {
-            temp = temp * Double (result.text!)!
-            result.text = "\(temp)"
+            display = display * Double (result.text!)!
+            result.text = "\(display)"
         }
         if str == 2
         {
-            temp = temp / Double (result.text!)!
-            result.text = "\(temp)"
+            display = display / Double (result.text!)!
+            result.text = "\(display)"
         }
         if str == 3
         {
@@ -103,6 +118,8 @@ class ViewController: UIViewController {
     
     @IBAction func buttonDelet(_ sender: Any) {
         result.text = ""
+        temp = 0
+        display = 1
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,4 +128,3 @@ class ViewController: UIViewController {
 
 
 }
-
