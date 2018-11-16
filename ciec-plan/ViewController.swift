@@ -98,21 +98,25 @@ class ViewController: UIViewController {
         {
             display = display * Double (result.text!)!
             result.text = "\(display)"
+            display = 1
         }
         if str == 2
         {
             display = display / Double (result.text!)!
             result.text = "\(display)"
+            display = 1
         }
         if str == 3
         {
             temp = temp + Double (result.text!)!
             result.text = "\(temp)"
+            temp = 0
         }
         if str == 4
         {
             temp = temp - Double (result.text!)!
             result.text = "\(temp)"
+            temp = 0
         }
     }
     
