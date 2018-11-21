@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     var temp:Double = 0
     var str:Double = 0
     var display:Double = 1
+    var extemp:Double = 0
+    var divtex:Double = 1
 
     @IBOutlet weak var result: UITextField!
     
@@ -63,13 +65,14 @@ class ViewController: UIViewController {
     
     @IBAction func buttonDiv(_ sender: Any) {
         str = 2
-        if(display != 1)
+        if(divtex != 1)
         {
             display = display / Double (result.text!)!
         }
         else
         {
             display = Double (result.text!)!
+            divtex = 0
         }
         result.text = ""
     }
@@ -82,13 +85,14 @@ class ViewController: UIViewController {
     
     @IBAction func buttonReduce(_ sender: Any) {
         str = 4
-        if(temp != 0)
+        if(extemp != 0)
         {
         temp = temp - Double (result.text!)!
         }
         else
         {
         temp = Double (result.text!)!
+        extemp = 1
         }
         result.text = ""
     }
