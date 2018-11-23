@@ -33,6 +33,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "2"
+        sexabe = 0
     }
     
     @IBAction func button3(_ sender: Any) {
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "3"
+        sexabe = 0
     }
     
     @IBAction func button4(_ sender: Any) {
@@ -49,6 +51,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "4"
+        sexabe = 0
     }
     
     @IBAction func button5(_ sender: Any) {
@@ -57,6 +60,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "5"
+        sexabe = 0
     }
     
     @IBAction func button6(_ sender: Any) {
@@ -65,6 +69,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "6"
+        sexabe = 0
     }
     
     @IBAction func button7(_ sender: Any) {
@@ -73,6 +78,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "7"
+        sexabe = 0
     }
     
     @IBAction func button8(_ sender: Any) {
@@ -81,6 +87,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "8"
+        sexabe = 0
     }
     
     @IBAction func button9(_ sender: Any) {
@@ -89,6 +96,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "9"
+        sexabe = 0
     }
     
     @IBAction func button0(_ sender: Any) {
@@ -97,6 +105,7 @@ class ViewController: UIViewController {
             result.text = ""
         }
         result.text = result.text! + "0"
+        sexabe = 0
     }
     
     @IBAction func buttonMul(_ sender: Any) {
