@@ -155,6 +155,7 @@ class ViewController: UIViewController {
             result.text = ""
             result.text = "\(display)"
             sexabe = 1
+            divtex = 0
         }
         else if(str == 4)
         {
@@ -162,6 +163,7 @@ class ViewController: UIViewController {
             result.text = ""
             result.text = "\(display)"
             sexabe = 1
+            divtex = 0
         }
         else
         {
@@ -228,6 +230,7 @@ class ViewController: UIViewController {
             result.text = ""
             result.text = "\(temp)"
             sexabe = 1
+            extemp = 1
         }
         else if(str == 2)
         {
@@ -235,6 +238,7 @@ class ViewController: UIViewController {
             result.text = ""
             result.text = "\(temp)"
             sexabe = 1
+            extemp = 1
         }
         else
         {
