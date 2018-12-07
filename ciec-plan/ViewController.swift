@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     var extemp:Double = 0
     var divtex:Double = 1
     var sexabe:Double = 0
-    var variable:Double = 0
 
     @IBOutlet weak var result: UITextField!
     
@@ -112,21 +111,24 @@ class ViewController: UIViewController {
     @IBAction func buttonMul(_ sender: Any) {
         if(str == 3)
         {
-            if(variable == 1)
-            {
-                display = display + Double (result.text!)!
-                result.text = ""
-                result.text = "\(display)"
-                sexabe = 1
-                variable = 0
-            }
-            else
-            {
-                display = temp + Double (result.text!)!
-                result.text = ""
-                result.text = "\(display)"
-                sexabe = 1
-            }
+            display = temp + Double (result.text!)!
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
+        }
+        else if(str == 4)
+        {
+            display = temp - Double (result.text!)!
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
+        }
+        else if(str == 2)
+        {
+            display = display / Double (result.text!)!
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
         }
         else
         {
@@ -139,19 +141,44 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonDiv(_ sender: Any) {
-        str = 2
-        if(divtex != 1)
+        if(str == 3)
         {
-            display = display / Double (result.text!)!
+            display = temp + Double (result.text!)!
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
+            divtex = 0
+        }
+        else if(str == 1)
+        {
+            display = display * Double(result.text!)!
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
+        }
+        else if(str == 4)
+        {
+            display = temp - Double(result.text!)!
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
         }
         else
         {
-            display = Double (result.text!)!
-            divtex = 0
+            if(divtex != 1)
+            {
+                display = display / Double (result.text!)!
+            }
+            else
+            {
+                display = Double (result.text!)!
+                divtex = 0
+            }
+            result.text = ""
+            result.text = "\(display)"
+            sexabe = 1
         }
-        result.text = ""
-        result.text = "\(display)"
-        sexabe = 1
+        str = 2
     }
     
     @IBAction func buttonAdd(_ sender: Any) {
@@ -164,29 +191,24 @@ class ViewController: UIViewController {
         }
         else if(str == 1)
         {
-            display = display * Double (result.text!)!
+            temp = display * Double (result.text!)!
             result.text = ""
-            result.text = "\(display)"
+            result.text = "\(temp)"
             sexabe = 1
-            variable = 1
+        }
+        else if(str == 2)
+        {
+            temp = display / Double (result.text!)!
+            result.text = ""
+            result.text = "\(temp)"
+            sexabe = 1
         }
         else
         {
-            if(variable == 1)
-            {
-                temp = display + Double (result.text!)!
-                result.text = ""
-                result.text = "\(temp)"
-                sexabe = 1
-                variable = 0
-            }
-            else
-            {
-                temp = temp + Double (result.text!)!
-                result.text = ""
-                result.text = "\(temp)"
-                sexabe = 1
-            }
+            temp = temp + Double (result.text!)!
+            result.text = ""
+            result.text = "\(temp)"
+            sexabe = 1
         }
         str = 3
     }
@@ -199,6 +221,20 @@ class ViewController: UIViewController {
             result.text = "\(temp)"
             sexabe = 1
             extemp = 1
+        }
+        else if(str == 1)
+        {
+            temp = display * Double(result.text!)!
+            result.text = ""
+            result.text = "\(temp)"
+            sexabe = 1
+        }
+        else if(str == 2)
+        {
+            temp = display / Double(result.text!)!
+            result.text = ""
+            result.text = "\(temp)"
+            sexabe = 1
         }
         else
         {
@@ -237,24 +273,11 @@ class ViewController: UIViewController {
         }
         if str == 3
         {
-            if(variable == 1)
-            {
-                temp = display + Double (result.text!)!
-                result.text = ""
-                result.text = "\(temp)"
-                temp = 0
-                extemp = 0
-                sexabe = 1
-                variable = 0
-            }
-            else
-            {
-                temp = temp + Double (result.text!)!
-                result.text = "\(temp)"
-                temp = 0
-                extemp = 0
-                sexabe = 1
-            }
+            temp = temp + Double (result.text!)!
+            result.text = "\(temp)"
+            temp = 0
+            extemp = 0
+            sexabe = 1
         }
         if str == 4
         {
@@ -274,7 +297,6 @@ class ViewController: UIViewController {
         divtex = 1
         str = 0
         sexabe = 0
-        variable = 0
     }
     override func viewDidLoad() {
         super.viewDidLoad()
