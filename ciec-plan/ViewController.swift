@@ -263,34 +263,28 @@ class ViewController: UIViewController {
         {
             display = display * Double (result.text!)!
             result.text = "\(display)"
-            display = 1
-            divtex = 1
-            sexabe = 1
         }
         if str == 2
         {
             display = display / Double (result.text!)!
             result.text = "\(display)"
-            display = 1
-            divtex = 1
-            sexabe = 1
         }
         if str == 3
         {
             temp = temp + Double (result.text!)!
             result.text = "\(temp)"
-            temp = 0
-            extemp = 0
-            sexabe = 1
         }
         if str == 4
         {
             temp = temp - Double (result.text!)!
             result.text = "\(temp)"
-            temp = 0
-            extemp = 0
-            sexabe = 1
         }
+        temp = 0
+        display = 1
+        extemp = 0
+        divtex = 1
+        str = 0
+        sexabe = 0
     }
     
     @IBAction func buttonDelet(_ sender: Any) {
